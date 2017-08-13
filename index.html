@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Justin Wang</title>
+<title>Fitin'Sure</title>
 <meta name="description" content="">
 <meta name="author" content="">
 
@@ -42,16 +42,14 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand page-scroll" href="#page-top">Justin Wang</a> </div>
+      <a class="navbar-brand page-scroll" href="#page-top">Fitin'Sure</a> </div>
     
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#about" class="page-scroll">About</a></li>
-        <li><a href="#education" class="page-scroll">Education</a></li>
-        <li><a href="#restaurant-menu" class="page-scroll">Menu</a></li>
-        <li><a href="#portfolio" class="page-scroll">Gallery</a></li>
-        <li><a href="#team" class="page-scroll">Chefs</a></li>
+        <li><a href="#portfolio" class="page-scroll">Product</a></li>
+        <li><a href="#team" class="page-scroll">Partner</a></li>
         <li><a href="#call-reservation" class="page-scroll">Contact</a></li>
       </ul>
     </div>
@@ -59,200 +57,206 @@
   </div>
 </nav>
 <!-- Header -->
-<header id="header">
-  <div class="intro">
-    <div class="overlay">
-      <div class="container">
-        <div class="row">
-          <div class="intro-text">
-            <h1>Justin Wang</h1>
-            <p> ComputerScience & Finance @ HKU</p>
-            <a href="#about" class="btn btn-custom btn-lg page-scroll">Know more about me</a> </div>
+
+
+
+
+
+
+
+
+
+
+  <div id="login-form" class="container" style="height: 100%; background-image: url('img/gym.jpg');padding-left: 0px;padding-right: 0px;width:100%;background-repeat: no-repeat;background-size: cover;">
+      <div class="row" style="padding-top: 10%">
+      <div class="col-md-6 col-md-offset-3" style="width: 40%;margin-left: 30%">
+        <div class="panel panel-login">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-6">
+                <a href="#" class="active" id="login-form-link">Login</a>
+              </div>
+              <div class="col-xs-6">
+                <a href="#" id="register-form-link">Register</a>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-lg-12">
+                <form id="login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display: block;">
+                  <div class="form-group">
+                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                  </div>
+                  <div class="form-group text-center">
+                    <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+                    <label for="remember"> Remember Me</label>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-sm-6 col-sm-offset-3">
+                        <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In" onclick="login()">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="text-center">
+                          <a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <form id="register-form" action="https://phpoll.com/register/process" method="post" role="form" style="display: none;">
+                  <div class="form-group">
+                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                  </div>
+                  <div class="form-group">
+                    <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-sm-6 col-sm-offset-3">
+                        <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</header>
+
+  <script type="text/javascript">
+    function login() {
+      alert("Login Success!");
+      document.getElementById('login-form').style.display = "none";
+      document.getElementById('about').style.display = "block";
+      document.getElementById('education').style.display = "block";
+    }
+  </script>
+  
+
+<div style="background-image: url('img/background.jpg'); width: 100%;">
+  <img src="img/banner-logo.png" style="padding-left: 2%">
+</div>
 <!-- About Section -->
-<div id="about">
+<div id="about" style="display: none;">
   <div class="container">
     <div class="row">
+    <h2 style="padding-left: 40%">Your Profile</h2>
+    <img src="img/bar.png" style="width:100%">
+    <p style="position:relative;
+              top:-57px;
+              left: 57%;
+              font-size: 24px;
+              font-size: 24px;;
+              font-weight: 900;
+              font-family: sans-serif;
+              color: #F7941E;">
+      36 Weeks Left</p>
       <div class="col-xs-12 col-md-6 ">
-        <div class="about-img"><img src="img/about.jpg" class="img-responsive" alt=""></div>
+        <div style="display: flex;">
+        <p style="font-size: 36px; font-weight: 700;padding-left: 7%">Current Fitness Coin:</p>
+        <p style="font-size: 42px; font-weight: 700;padding-left: 2%;color: #F7941E"> 100</p>
+        </div>
+        <div class="about-img"><img src="img/chart.png" class="img-responsive" alt=""></div>
       </div>
       <div class="col-xs-12 col-md-6">
-        <div class="about-text">
-          <h2>Wang Ching-Yuan</h2>
+        <div class="about-text" style="padding-top: 35%">
+          
           <hr>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
-          <h3>Awarded</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>
+          <div style="display: flex">
+          <h1 style="color: #F7941E">30</h1>
+          <h1>/120 Mins</h1>
+          </div>
+           <div style="display: flex">
+          <h1 style="color: #F7941E">123</h1>
+          <h1>/250 Km</h1>
+          </div>
+           <div style="display: flex">
+          <h1 style="color: #F7941E">6783</h1>
+          <h1>/10000 Steps</h1>
+          </div>
+
+          
+          
         </div>
       </div>
     </div>
   </div>
 </div>
 <!-- Education Section -->
-<div id="education">
+<div id="education" style="display: none;">
   <div class="section-title text-center center">
     <div class="overlay">
-      <h2>Education</h2>
-      <hr>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>
-    </div>
-  </div>
-  <div class="container">
-    <div class="edurow">
-      <div class="col-xs-12 col-sm-12">
-      	<div class="IFuckingCreateYoutoMakeItCenter">
-        <div class="menu-section">
-          <h2 class="menu-section-title">Education</h2>
-          <hr>
-          <div class="menu-item">
-            <div class="menu-item-name">Taipei Jianguo Muniipal Senior High School</div>
-            <div class="menu-item-price"> 2012.09 ~ 2015.06 </div>
-            <div class="menu-item-description"> Math and Science Talented Class </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> The Universtiy of Hong Kong </div>
-            <div class="menu-item-price"> 2015.09 ~ 2019.06 </div>
-            <div class="menu-item-description"> Double Major in Computer Science and Finance </div>
-          </div>
-          
-        </div>
-        </div>
-      </div>
-      
-      </div>
-    </div>
-    
-  </div>
-</div>
-<!-- Restaurant Menu Section -->
-<div id="restaurant-menu">
-  <div class="section-title text-center center">
-    <div class="overlay">
-      <h2>Menu</h2>
+      <h2>Other Plan</h2>
       <hr>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>
     </div>
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-sm-6">
-        <div class="menu-section">
-          <h2 class="menu-section-title">Breakfast & Starters</h2>
-          <hr>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $35 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-6">
-        <div class="menu-section">
-          <h2 class="menu-section-title">Main Course</h2>
-          <hr>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $45 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-        </div>
+      <div class="categories" style="display: none;">
+        <ul class="cat">
+          <li>
+            <ol class="type">
+              <li><a href="#" data-filter="*" class="active">All</a></li>
+              <li><a href="#" data-filter=".breakfast">Insurance</a></li>
+              <li><a href="#" data-filter=".lunch">Device</a></li>
+              <li><a href="#" data-filter=".dinner">Promotion</a></li>
+            </ol>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12 col-sm-6">
-        <div class="menu-section">
-          <h2 class="menu-section-title">Dinner</h2>
-          <hr>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $45 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $350 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+      <div class="portfolio-items">
+        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/plan1.png" title="Fitbit" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>FitBit</h4>
+              </div>
+              <img src="img/portfolio/plan1.png" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
-      </div>
-      <div class="col-xs-12 col-sm-6">
-        <div class="menu-section">
-          <h2 class="menu-section-title">Coffee & Drinks</h2>
-          <hr>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $35 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
+        <div class="col-sm-6 col-md-4 col-lg-4 dinner">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="img/portfolio/plan2.png" title="Garmin" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Garmin</h4>
+              </div>
+              <img src="img/portfolio/plan2.png" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-name"> Delicious Dish </div>
-            <div class="menu-item-price"> $30 </div>
-            <div class="menu-item-description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. </div>
-          </div>
-        </div>
+        </div>     
       </div>
     </div>
   </div>
 </div>
+
+
 <!-- Portfolio Section -->
 <div id="portfolio">
   <div class="section-title text-center center">
     <div class="overlay">
-      <h2>Gallery</h2>
+      <h2>Our Product</h2>
       <hr>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>
     </div>
@@ -264,9 +268,9 @@
           <li>
             <ol class="type">
               <li><a href="#" data-filter="*" class="active">All</a></li>
-              <li><a href="#" data-filter=".breakfast">Breakfast</a></li>
-              <li><a href="#" data-filter=".lunch">Lunch</a></li>
-              <li><a href="#" data-filter=".dinner">Dinner</a></li>
+              <li><a href="#" data-filter=".insurance">Insurance</a></li>
+              <li><a href="#" data-filter=".device">Device</a></li>
+              <li><a href="#" data-filter=".promotion">Promotion</a></li>
             </ol>
           </li>
         </ul>
@@ -275,114 +279,73 @@
     </div>
     <div class="row">
       <div class="portfolio-items">
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
+        
+        <div class="col-sm-6 col-md-4 col-lg-4 device">
           <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/01-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+            <div class="hover-bg"> <a href="img/portfolio/garmin.jpg" title="Garmin" data-lightbox-gallery="gallery1">
               <div class="hover-text">
-                <h4>Dish Name</h4>
+                <h4>Garmin</h4>
               </div>
-              <img src="img/portfolio/01-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="img/portfolio/garmin.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 dinner">
+         <div class="col-sm-6 col-md-4 col-lg-4 insurance">
           <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/02-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+            <div class="hover-bg"> <a href="img/portfolio/medibank.png" title="Medibank" data-lightbox-gallery="gallery1">
               <div class="hover-text">
-                <h4>Dish Name</h4>
+                <h4>Medibank</h4>
               </div>
-              <img src="img/portfolio/02-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="img/portfolio/medibank.png" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
+        <div class="col-sm-6 col-md-4 col-lg-4 device">
           <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/03-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+            <div class="hover-bg"> <a href="img/portfolio/apple.jpg" title="Apple Watch" data-lightbox-gallery="gallery1">
               <div class="hover-text">
-                <h4>Dish Name</h4>
+                <h4>Apple Watch</h4>
               </div>
-              <img src="img/portfolio/03-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="img/portfolio/apple.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
+       
+        <div class="col-sm-6 col-md-4 col-lg-4 promotion">
           <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/04-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+            <div class="hover-bg"> <a href="img/portfolio/coles.png" title="Coles" data-lightbox-gallery="gallery1">
               <div class="hover-text">
-                <h4>Dish Name</h4>
+                <h4>Coles</h4>
               </div>
-              <img src="img/portfolio/04-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="img/portfolio/coles.png" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 dinner">
+        <div class="col-sm-6 col-md-4 col-lg-4 promotion">
           <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/05-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+            <div class="hover-bg"> <a href="img/portfolio/Fitness-First_logo.png" title="Fitness-First" data-lightbox-gallery="gallery1">
               <div class="hover-text">
-                <h4>Dish Name</h4>
+                <h4>Fitness-First</h4>
               </div>
-              <img src="img/portfolio/05-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="img/portfolio/Fitness-First_logo.png" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
+        <div class="col-sm-6 col-md-4 col-lg-4 device">
           <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/06-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+            <div class="hover-bg"> <a href="img/portfolio/fitbit-logo.png" title="Fitbit" data-lightbox-gallery="gallery1">
               <div class="hover-text">
-                <h4>Dish Name</h4>
+                <h4>FitBit</h4>
               </div>
-              <img src="img/portfolio/06-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="img/portfolio/fitbit-logo.png" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
+        <div class="col-sm-6 col-md-4 col-lg-4 insurance">
           <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/07-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+            <div class="hover-bg"> <a href="img/portfolio/iag.jpg" title="IAG" data-lightbox-gallery="gallery1">
               <div class="hover-text">
-                <h4>Dish Name</h4>
+                <h4>IAG</h4>
               </div>
-              <img src="img/portfolio/07-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="img/portfolio/iag.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/08-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/08-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 dinner">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/09-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/09-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/10-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/10-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 lunch">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/11-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/11-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/12-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dish Name</h4>
-              </div>
-              <img src="img/portfolio/12-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
+       
+
       </div>
     </div>
   </div>
@@ -392,7 +355,7 @@
   <div class="overlay">
     <div class="container">
       <div class="col-md-10 col-md-offset-1 section-title">
-        <h2>Meet Our Chefs</h2>
+        <h2>Our Partner</h2>
         <hr>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
       </div>
@@ -401,7 +364,7 @@
           <div class="thumbnail">
             <div class="team-img"><img src="img/team/01.jpg" alt="..."></div>
             <div class="caption">
-              <h3>Mike Doe</h3>
+              <h3>Steve Jobs</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam.</p>
             </div>
           </div>
@@ -410,7 +373,7 @@
           <div class="thumbnail">
             <div class="team-img"><img src="img/team/02.jpg" alt="..."></div>
             <div class="caption">
-              <h3>Chris Doe</h3>
+              <h3>Rock Johnson</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam.</p>
             </div>
           </div>
@@ -419,7 +382,7 @@
           <div class="thumbnail">
             <div class="team-img"><img src="img/team/03.jpg" alt="..."></div>
             <div class="caption">
-              <h3>Ethan Doe</h3>
+              <h3>Bruce Wayne</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam.</p>
             </div>
           </div>
@@ -431,7 +394,7 @@
 <!-- Call Reservation Section -->
 <div id="call-reservation" class="text-center">
   <div class="container">
-    <h2>Want to make a reservation? Call <strong>1-887-654-3210</strong></h2>
+    <h2>Want to register as a member? Call <strong>1-887-654-3210</strong></h2>
   </div>
 </div>
 <!-- Contact Section -->
